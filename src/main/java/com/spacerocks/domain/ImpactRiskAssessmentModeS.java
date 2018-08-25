@@ -22,4 +22,29 @@ public class ImpactRiskAssessmentModeS implements Serializable {
 
     @JsonProperty("data")
     private ArrayList<AssessmentData> data;
+
+    public String getCount() {
+        return count;
+    }
+
+    public void setCount(String count) {
+        this.count = count;
+    }
+
+    public ApiSignature getSignature() {
+        return signature;
+    }
+
+    public void setSignature(ApiSignature signature) {
+        this.signature = signature;
+    }
+
+    public ArrayList<AssessmentData> getData() {
+        return data;
+    }
+
+    public void setData(ArrayList<AssessmentData> data) {
+        this.data = data;
+    }
+
 }
