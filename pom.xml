@@ -25,18 +25,18 @@
   <distributionManagement>
     <snapshotRepository>
       <id>build.repository.spacerocks</id>
-      <url>s3://build.repository.spacerocks/snapshot</url>
+      <url>s3://repo.spacerocks.public/snapshot</url>
     </snapshotRepository>
     <repository>
       <id>build.repository.spacerocks</id>
-      <url>s3://build.repository.spacerocks/release</url>
+      <url>s3://repo.spacerocks.public/release</url>
     </repository>
   </distributionManagement>
 
   <repositories>
     <repository>
-      <id>build.repository.shopchat</id>
-      <url>s3://build.repository.spacerocks/release</url>
+      <id>build.repository.spacerocks</id>
+      <url>s3://repo.spacerocks.public/release</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
