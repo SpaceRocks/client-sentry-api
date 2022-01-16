@@ -12,7 +12,7 @@
 
   <properties>
     <java.version>1.8</java.version>
-    <squareup.retrofit>2.4.0</squareup.retrofit>
+    <squareup.retrofit>2.5.0</squareup.retrofit>
   </properties>
 
   <scm>
