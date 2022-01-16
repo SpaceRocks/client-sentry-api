@@ -16,9 +16,9 @@
   </properties>
 
   <scm>
-    <connection>scm:git:git@github.com:SpaceRocks/client-sentry-api.git</connection>
-    <url>scm:git@github.com:SpaceRocks/client-sentry-api.git</url>
-    <developerConnection>scm:git:git@github.com:SpaceRocks/client-sentry-api.git</developerConnection>
+    <connection>scm:git:https://github.com/SpaceRocks/client-sentry-api.git</connection>
+    <url>scm:git:https://github.com/SpaceRocks/client-sentry-api.git</url>
+    <developerConnection>scm:git:https://github.com/SpaceRocks/client-sentry-api.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
