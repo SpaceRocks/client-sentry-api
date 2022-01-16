@@ -22,6 +22,7 @@
     <tag>HEAD</tag>
   </scm>
 
+<!--
   <distributionManagement>
     <snapshotRepository>
       <id>build.repository.spacerocks</id>
@@ -32,6 +33,7 @@
       <url>s3://build.repository.spacerocks/release</url>
     </repository>
   </distributionManagement>
+ -->
 
   <repositories>
     <repository>
