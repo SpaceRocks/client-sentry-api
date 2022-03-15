@@ -4,12 +4,6 @@
   <artifactId>client-sentry-api</artifactId>
   <version>0.0.15-SNAPSHOT</version>
 
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.2.RELEASE</version>
-  </parent>
-
   <properties>
     <java.version>1.8</java.version>
     <squareup.retrofit>2.9.0</squareup.retrofit>
@@ -22,38 +16,7 @@
     <tag>HEAD</tag>
   </scm>
 
-<!--
-  <distributionManagement>
-    <snapshotRepository>
-      <id>build.repository.spacerocks</id>
-      <url>s3://build.repository.spacerocks/snapshot</url>
-    </snapshotRepository>
-    <repository>
-      <id>build.repository.spacerocks</id>
-      <url>s3://build.repository.spacerocks/release</url>
-    </repository>
-  </distributionManagement>
- -->
-
-  <repositories>
-    <repository>
-      <id>build.repository.spacerocks</id>
-      <url>s3://build.repository.spacerocks/release</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-hateoas</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-rest-core</artifactId>
-    </dependency>
     <dependency>
       <groupId>com.squareup.retrofit2</groupId>
       <artifactId>retrofit</artifactId>
@@ -65,11 +28,25 @@
       <version>${squareup.retrofit}</version>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.36</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.8.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>SpaceRocks</name>
+      <url>https://maven.pkg.github.com/SpaceRocks/client-sentry-api</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <plugins>
@@ -93,12 +70,5 @@
         </configuration>
       </plugin>
     </plugins>
-    <extensions>
-      <extension>
-        <groupId>org.kuali.maven.wagons</groupId>
-        <artifactId>maven-s3-wagon</artifactId>
-        <version>1.2.1</version>
-      </extension>
-    </extensions>
   </build>
 </project>
