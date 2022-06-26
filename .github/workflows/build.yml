@@ -65,7 +65,7 @@ jobs:
           mvn -B --quiet --no-transfer-progress release:clean release:prepare -DscmCommentPrefix="--skip-ci Preparing next build version - build" -DtagNameFormat="v@{project.version}"
           # #####################################################
           # #####################################################
-          # echo "Upload Artifact to AWS S3"
+          # echo "Upload Artifact"
           # #####################################################
           git checkout tags/v${next_version} -b inter-${next_version}
           mvn --quiet --no-transfer-progress clean deploy
