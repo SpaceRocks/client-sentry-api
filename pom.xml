@@ -40,10 +40,14 @@
     </dependency>
   </dependencies>
 
+   <activeProfiles>
+    <activeProfile>github</activeProfile>
+   </activeProfiles>
+
   <distributionManagement>
     <repository>
       <id>github</id>
-      <name>SpaceRocks</name>
+      <name>GitHub SpaceRocks Apache Maven Packages</name>
       <url>https://maven.pkg.github.com/SpaceRocks/client-sentry-api</url>
     </repository>
   </distributionManagement>
