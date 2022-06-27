@@ -40,10 +40,6 @@
     </dependency>
   </dependencies>
 
-   <activeProfiles>
-    <activeProfile>github</activeProfile>
-   </activeProfiles>
-
   <distributionManagement>
     <repository>
       <id>github</id>
