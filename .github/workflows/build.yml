@@ -36,12 +36,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           server-id: github 
-      - name: env setup - Configure AWS credentials from Test account
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
       - name: env setup - Git settings
         run: |
           git config user.email "dgreenfield0@gmail.com"
@@ -68,7 +62,9 @@ jobs:
           # echo "Upload Artifact"
           # #####################################################
           git checkout tags/v${next_version} -b inter-${next_version}
-          mvn --quiet --no-transfer-progress clean deploy
+          # Uncomment for DEBUG artifact deploy
+          mvn clean deploy
+          # mvn --quiet --no-transfer-progress clean deploy
           # #####################################################
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
