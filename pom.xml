@@ -42,7 +42,7 @@
 
   <distributionManagement>
     <repository>
-      <id>build.repository.spacerocks</id>
+      <id>github</id>
       <name>SpaceRocks</name>
       <url>https://maven.pkg.github.com/SpaceRocks/client-sentry-api</url>
     </repository>
